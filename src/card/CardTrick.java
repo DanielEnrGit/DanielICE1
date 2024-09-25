@@ -9,7 +9,7 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
- * modifier Daniel Enriquez 09/23/24
+ * modifier Daniel Enriquez 09/24/24
  */
 public class CardTrick {
     
@@ -21,7 +21,7 @@ public class CardTrick {
         {
             Card c = new Card();
             c.setValue(2);
-            //c.setSuit(Card.SUITS["Diamonds"])
+            //c.setSuit(Card.SUITS["Diamonds"]);
             magicHand[i] = c;
         }
         //Daniel Enriquez 991617573
@@ -30,11 +30,17 @@ public class CardTrick {
         System.out.println("Enter a card value (1-13):");
         int cardValue = input.nextInt();
         System.out.println("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades:");
-        int suitValue = input.nextInt();
+        String suitValue = input.nextLine();
         // and search magicHand here
-        
-        //Then report the result here
+        for (Card i : magicHand) {
+        if (i.getValue() == input.getValue() && i.getSuit() == input.getSuit()) {
+            //Then report the result here
+        System.out.println("Your card is " + cardValue);
+        } else {
+        System.out.println("Sorry, your card is not in the magic hand."); }
+        }
         // add one luckcard hard code 2,clubs
     }
+    
     
 }
