@@ -21,7 +21,7 @@ public class CardTrick {
         {
             Card c = new Card();
             c.setValue(2);
-            //c.setSuit(Card.SUITS["Diamonds"]);
+            c.setSuit(Card.SUITS["Diamonds"]);
             magicHand[i] = c;
         }
         //Daniel Enriquez 991617573
@@ -40,6 +40,9 @@ public class CardTrick {
         System.out.println("Sorry, your card is not in the magic hand."); }
         }
         // add one luckcard hard code 2,clubs
+        luckyCard l = new luckyCard();
+        l.setValue(2);
+        l.setSuit(Card.SUITS["Clubs"]);
     }
     
     
