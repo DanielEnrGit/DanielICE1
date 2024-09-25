@@ -43,6 +43,12 @@ public class CardTrick {
         luckyCard l = new luckyCard();
         l.setValue(2);
         l.setSuit(Card.SUITS["Clubs"]);
+        if (i == l) {
+        System.out.println("Congratulations! You got the lucky card!");
+        } else {
+        System.out.println("You did not get the lucky card"); }
+        }
+        }
     }
     
     
